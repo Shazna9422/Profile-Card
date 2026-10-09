@@ -1,0 +1,150 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.student-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.student-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.student-image {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #dbeafe;
+}
+
+.card-header h2 {
+  font-size: 21px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.course {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.student-details {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 18px;
+}
+
+.student-details p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.student-details strong {
+  color: #334155;
+}
+
+.skills-section {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.skills-section h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.skills-list li {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .student-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .student-container {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .app {
+    padding: 25px 15px;
+  }
+}
